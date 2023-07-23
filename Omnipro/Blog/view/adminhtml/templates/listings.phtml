@@ -1,0 +1,33 @@
+<?php
+/** @var \Omnipro\Blog\Block\Adminhtml\Blog\Grid $block */
+?>
+<div class="admin__data-grid-outer-wrap">
+    <table class="data-grid data-grid-draggable" id="blog_listing">
+        <thead>
+        <tr>
+            <th class="data-grid-th">#</th>
+            <th class="data-grid-th">Title</th>
+            <th class="data-grid-th">Content</th>
+            <th class="data-grid-th">Date</th>
+            <th class="data-grid-th">Edit</th>
+            <th class="data-grid-th">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($block->getPosts() as $post) : ?>
+            <tr>
+                <td><?php echo $post->getId(); ?></td>
+                <td><?php echo $post->getTitle(); ?></td>
+                <td><?php echo $post->getContent(); ?></td>
+                <td><?php echo $post->getCreatedAt(); ?></td>
+                <td>
+                    <a href="<?php echo $block->getUrl('omnipro/blog/edit', ['id' => $post->getId()]); ?>">Edit</a>
+                </td>
+                <td>
+                    <a href="<?php echo $block->getUrl('omnipro/blog/delete', ['id' => $post->getId()]); ?>" onclick="return confirm('Are you sure you want to delete this post?')">Delete</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
