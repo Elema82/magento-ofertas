@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+
+
+        <!-- Menu Group -->
+        <add id="Tiendamia_Deals::menu_section" title="TiendaMia Deals" module="Tiendamia_Deals" sortOrder="101" parent="Magento_Customer::customer" resource="Tiendamia_Deals::menu_section"/>
+
+        <!-- Child Menus -->
+        <add id="Tiendamia_Deals::menu_config" title="Manage Settings" module="Tiendamia_Deals" sortOrder="20" parent="Tiendamia_Deals::menu_section" resource="Tiendamia_Deals::config" />
+
+
+
+
+<!--        <add id="Tiendamia_Deals::config" title="TiendaMia Ofertas" translate="title" module="Tiendamia_Deals" parent="Magento_Backend::content" sortOrder="50" dependsOnModule="Tiendamia_Deals" resource="Tiendamia_Deals::config"/>-->
+
+    </menu>
+</config>
+
+
+
+

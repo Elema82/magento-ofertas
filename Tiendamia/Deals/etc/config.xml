@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <tiendamia_deals>
+            <general>
+                <enabled>1</enabled>
+                <title_page>Ofertas de la semana en latam</title_page>
+                <disabled_message>Perdón, en este momento no existen ofertas vigentes.</disabled_message>
+                <due_date>2023-09-20</due_date>
+                <category_arg>14</category_arg>
+                <category_uru>23</category_uru>
+                <category_chi>03</category_chi>
+            </general>
+        </tiendamia_deals>
+    </default>
+</config>
